@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Project</title>
+    <!-- css embeded -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- cdnjs css links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!----- google fonts ----->
+    <!-- font-1 italic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <!-- font-2 signature -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
+    <!-- font-3 main-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <!-- aos plugin -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- autocomplete -->
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.theme.css">
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.theme.min.css">
+    <!-- media query -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;" >
+        <div class="container">
+ 
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg.png" alt="" width="80" height="70">
+                <span style="font-family: 'Dancing Script', cursive;">Glamxo</span>
+            </a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-4" >
+                        <li class="navbar-item">
+                            <a class="nav-link" href="index.html" style="color: black;">Home</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="aboutus.html" style="color: black">About</a>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="navbar-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="mydropdown" data-bs-toggle="dropdown" href="" style="color: black">Categories</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" id="ul-color" aria-labelledby="#mydropdown">
+                                <li class="dropdown-item">
+                                    <a class="items" href="categories/beautycare.html" style="color: black;">Beauty care</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a class="items" href="categories/cosmetics.html" style="color: black;">Cosmetics</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a class="items" href="categories/fragrance.html" style="color: black;">Fragrance</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Dropdown end -->
+                        <li class="navbar-item">
+                            <a href="contactus.html" class="nav-link" href="" style="color: black;">Contact</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="login.html" style="color: black">Login</a>
+                        </li>                       
+                    </ul>              
+                <!-- search bar -->
+                <div style="margin-left: 15px;"  class="ms-auto">
+                    <img src="images/searchicon.png.png" width="30" height="30" alt="" onclick="search()">
+                    <input class="search-bar" type="text" placeholder="Search Products" id="myinput">
+                </div>
+                <!-- search bar end -->
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar-end -->
+    
+
+    <!-- Slider -->
+    <div class="carousel slide" data-bs-ride="carousel" id="myslideshow">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="container-fluid" id="slide-1">
+                    <div class="slide-content-padding">
+                        <h2>velvet beauty</h2>
+                        <h1>R o u g h &nbsp;E d i t i o n</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nulla? <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quod?</p><br>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container-fluid" id="slide-2">
+                    <div style="padding: 100px 0 0 50px ;">
+                        <h2 style="font-size: 4vw; font-family: 'Hurricane', cursive;">velvet beauty</h2>
+                        <h1 style="font-size: 5vw;font-family: 'Quicksand', sans-serif;">R o u g h &nbsp;E d i t i o n</h1>
+                        <p style="font-size: 1.5vw; font-weight: 200;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nulla? <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quod?</p><br>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container-fluid" id="slide-3">
+                    <div style="padding: 100px 0 0 50px ;">
+                        <h2 style="font-size: 4vw; font-family: 'Hurricane', cursive;">velvet beauty</h2>
+                        <h1 style="font-size: 5vw;font-family: 'Quicksand', sans-serif;">R o u g h &nbsp;E d i t i o n</h1>
+                        <p style="font-size: 1.5vw; font-weight: 200;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nulla? <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quod?</p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="carousel-control-next" data-bs-slide="next" data-bs-target="#myslideshow">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <button type="button" class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#myslideshow">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+    </div>
+    <br><br><br><br>
+    <!-- Slider end -->
+
+    <!-- Products -->
+    <center>
+        <div>
+            <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">FIND YOUR BEAUTY MATCH</h2>
+            <p style="font-family: 'Dancing Script', cursive; color:#A6ACAF;  font-size: 20px;">best place to find your beauty</p>
+        </div>
+    </center>
+
+
+
+    <div class="owl-carousel owl-theme">
+
+        <!-- product 01 -->
+        <div>
+            <a href="Products/product-1.html"><img src="images/product-01.jpg" alt=""></a>
+            <center>
+                <h5 id="title">STICK LIPSTICK</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$23.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </center>
+        </div>
+        <!-- product 02 -->
+        <div>
+            <a href="Products/product-2.html"><img src="images/product-02.jpg" alt=""></a>
+            <center>
+                <h5 id="title">SUMMER MIRAGE</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$32.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </center>
+        </div>
+        <!-- product 03 -->
+        <div>
+            <a href="Products/product-3.html"><img src="images/product-03.jpg" alt=""></a>
+            <center>
+                <h5 id="title">HIGHLIGHTER</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$37.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </center>
+        </div>
+        <!-- product 04 -->
+        <div>
+            <a href="Products/product-4.html"><img src="images/product-04.jpg" alt=""></a>
+            <center>
+                <h5 id="title">EYE SHADOW KIT</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$43.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </center>
+        </div>
+        <!-- products 05 -->
+        <div>
+            <a href="Products/product-5.html"><img src="images/product-05.jpg" alt=""></a>
+            <center>
+                <h5 id="title">EYE SHADOW</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$27.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </center>
+        </div>
+        <!-- product 06 -->
+        <div>
+            <a href="Products/product-6.html"><img src="images/product-06.jpg" alt=""></a>
+            <center>
+                <h5 id="title">WILD PALETTES</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$25.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </center>
+        </div>
+         <!-- product 07 -->
+         <div>
+            <a href="Products/product-7.html"><img src="images/product-07.jpg" alt=""></a>
+            <center>
+                <h5 id="title">RED LIPSTICK</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$37.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </center>
+        </div>
+        <!-- product 08 -->
+        <div>
+            <a href="Products/product-8.html"><img src="images/product-08.jpg" alt=""></a>
+            <center>
+                <h5 id="title">FILM EYESHADOW</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$27.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </center>
+        </div>
+        <!-- product 09 -->
+        <div>
+            <a href="Products/product-9.html"><img src="images/product-09.jpg" alt=""></a>
+            <center>
+                <h5 id="title">CONCEALER</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$23.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </center>
+        </div>
+        <!-- product 10 -->
+        <div>
+            <a href="Products/product-10.html"><img src="images/product-10.jpg" alt=""></a>
+            <center>
+                <h5 id="title">ROZE SAFARI</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$23.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </center>
+        </div>
+        <!-- product 11 -->
+        <div>
+            <a href="Products/product-11.html"><img src="images/product-11.jpg" alt=""></a>
+            <center>
+                <h5 id="title">CHANEL</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$57.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </center>
+        </div>
+        <!-- product 12 -->
+        <div>
+            <a href="Products/product-12.html"><img src="images/product-12.jpg" alt=""></a>
+            <center>
+                <h5 id="title">LIP GLOSS</h5>
+                <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                <h6 id="price">$20.00</h6>
+                <div class="rating" style="color: lightgray;">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </center>
+        </div>
+        
+    </div>
+
+         <!-- jquery cdn -->
+         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+         <!-- cdnjs link -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                autoplay:true,
+                margin:20,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:4
+                    }
+                }
+            });
+        });
+    </script>
+    <!-- Products end -->
+    
+    <!-- Pictures -->
+    <div class="container-fluid" style="margin-top: 100px;">
+        <div class="row" id="our-products">
+            <!-- 01 -->
+             <div class="div-img-1 col-lg-3 col-md-6 col-sm">
+                <div class="containermine">
+                <div class="image" style=" height: 300px; width:300px;">
+                </div>
+                <a href="Products/product-5.html">
+                    <div class="overlay">
+                        <div class="text" style="font-family: 'Quicksand', sans-serif;">EYE SHADOW <br> 
+                          <span style="font-size: 16px; font-family:'Times New Roman', Times, serif; color: #A6ACAF;">Beauty. Cosmetics</span>
+                        </div>
+                    </div>
+                </a>
+              </div>
+            </div> 
+            <!-- 02 -->
+            <div class="div-img-2 col-lg-3 col-md-6 col-sm">
+                <div class="containermine">
+                    <div class="image" style=" height: 300px; width:300px;">
+                    </div>
+                    <a href="Products/product-1.html">
+                        <div class="overlay">
+                            <div class="text" style="font-family: 'Quicksand', sans-serif;">STICK LIPSTICK <br> 
+                              <span style="font-size: 16px; font-family:'Times New Roman', Times, serif; color: #A6ACAF;">Beauty. Cosmetics</span>
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+            </div>
+            <!-- 03 -->
+            <div class="div-img-3 col-lg-3 col-md-6 col-sm">
+                <div class="containermine">
+                    <div class="image" style=" height: 300px; width:300px;">
+                    </div>
+                    <a href="Products/product-3.html">
+                        <div class="overlay">
+                            <div class="text" style="font-family: 'Quicksand', sans-serif;">HIGHLIGHTER <br> 
+                              <span style="font-size: 16px; font-family:'Times New Roman', Times, serif; color: #A6ACAF;">Beauty. Cosmetics</span> </div>
+                          </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 04 -->
+            <div class="div-img-4 col-lg-3 col-md-6 col-sm">
+                <div class="containermine">
+                    <div class="image" style=" height: 300px; width:300px;">
+                    </div>
+                   <a href="Products/product-2.html">
+                    <div class="overlay">
+                        <div class="text" style="font-family: 'Quicksand', sans-serif;">SUMMER MIRAGE <br> 
+                          <span style="font-size: 16px; font-family:'Times New Roman', Times, serif; color: #A6ACAF;">Beauty. Bodycare</span> </div>
+                      </div>
+                   </a>
+                  </div>
+            </div>
+        </div>
+        <!-- 05 -->
+        <div class="row">
+            <div class="div-img-5 col-lg-3 col-md-6 col-sm">
+                <div class="containermine">
+                    <div class="image" style=" height: 300px; width:300px;">
+                    </div>
+                    <a href="Products/product-6.html">
+                        <div class="overlay">
+                            <div class="text" style="font-family: 'Quicksand', sans-serif;">WIlD PALLETES <br> 
+                              <span style="font-size: 16px; font-family:'Times New Roman', Times, serif; color: #A6ACAF;">Beauty. Bodycare</span> </div>
+                          </div>
+                    </a>
+                  </div>
+            </div>
+            <!-- 06 -->
+            <div class="div-img-6 col-lg-3 col-md-6 col-sm">
+                <div class="containermine">
+                    <div class="image" style=" height: 300px; width:300px;">
+                    </div>
+                   <a href="Products/product-4.html">
+                    <div class="overlay">
+                        <div class="text" style="font-family: 'Quicksand', sans-serif;">EYESHADOW KIT<br> 
+                          <span style="font-size: 16px; font-family:'Times New Roman', Times, serif; color: #A6ACAF;">Beauty. Make Up</span> </div>
+                      </div>
+                   </a>
+                  </div>
+            </div>
+            <!-- 07 -->
+            <div class="div-img-7 col-lg-3 col-md-6 col-sm">
+                <div class="containermine">
+                    <div class="image" style=" height: 300px; width:300px;">
+                    </div>
+                    <a href="Products/product-9.html">
+                        <div class="overlay">
+                            <div class="text" style="font-family: 'Quicksand', sans-serif;">CONCEALER <br> 
+                              <span style="font-size: 16px; font-family:'Times New Roman', Times, serif; color: #A6ACAF;">Beauty. Makeup</span> </div>
+                          </div>
+                    </a>
+                  </div>
+            </div>
+            <!-- 08 -->
+            <div class="div-img-8 col-lg-3 col-md-6 col-sm">
+                <div class="containermine">
+                    <div class="image" style=" height: 300px; width:300px;">
+                    </div>
+                    <a href="categories/beautycare.html">
+                        <div class="overlay">
+                            <div class="text" style="font-family: 'Quicksand', sans-serif;">SKIN CARE <br> 
+                              <span style="font-size: 16px; font-family:'Times New Roman', Times, serif; color: #A6ACAF;">Beauty. Cosmetics</span> </div>
+                          </div>
+                    </a>
+                  </div>
+            </div>
+        </div>
+    </div>
+        <!-- Pictures end -->
+
+        <!-- Brands -->
+        <center>
+            <div style="margin-top: 130px;">
+                <div class="brands">
+                    <img src="images/brand-1.png" alt="">
+                    <img src="images/brand-2.png" alt="">
+                    <img src="images/brand-3.png" alt="">
+                    <img src="images/brand-4.png" alt="">
+                    <img src="images/brand-5.png" alt="">
+                </div>
+            </div>
+        </center>
+        <!-- brands end -->
+
+        <!-- carousel 2 -->
+        <div id="carousel-2">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" id="carousel-2-items">
+                  <div class="carousel-item active" data-bs-interval="3000">
+                    <center>
+                        <h1>perfect shades</h1>
+                        <h3 style="font-size: 35px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">TESTIMONIALS</h3>
+                        <p  style="font-size: 25px; font-family: 'Dancing Script', cursive;">Glamxo is definately place to be when it comes to makeup;<br> you go into store, and touch it, and try it, and love it. i've never <br> bought anything on the internet. i like experience</p>
+                        <h6 style="color: gray; font-family: 'Times New Roman', Times, serif;">- Iman -</h6>
+                    </center>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000" >
+                    <center>
+                        <h1>perfect shades</h1>
+                        <h3 style="font-size: 35px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">TESTIMONIALS</h3>
+                        <p style="font-size: 25px; font-family: 'Dancing Script', cursive;">I would go to cosmetics counters and buy tow or three foundations and <br> powders, and then go home and mix them before i came up with <br> something suitable for my understones</p>
+                        <h6 style="color: gray; font-family: 'Times New Roman', Times, serif;">- Mare Jacobs -</h6>
+                    </center>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <center>
+                        <h1>perfect shades</h1>
+                        <h3 style="font-size: 35px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">TESTIMONIALS</h3>
+                        <p style="font-size: 25px; font-family: 'Dancing Script', cursive;">Glamxo is definately place to be when it comes to makeup; you go <br> into store, and touch it, and try it, and love it. i've never bought <br> anything on the internet. i like experience</p>
+                        <h6 style="color: gray; font-family: 'Times New Roman', Times, serif;">- Dita Von Teese -</h6>
+                    </center>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="padding-top: 100px;">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"  style="padding-top: 100px;">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+
+        <!-- makeup artist -->
+        <div class="container" style="margin-top:150px ;">
+            <div class="row">
+                <div class="col-lg-6">
+                    <center><img src="images/artist-1.jpg" height="560px" width="560px" class="img-fluid"></center>
+                </div>
+                <div class="col-lg-6" style="background-color: #fff1fd; height: 547px">
+                    <center style="margin-top: 140px;">
+                        <h2>CLAUDIA KENNEN</h2>
+                        <h5 style="font-family: 'Dancing Script', cursive;">Make Up Artist</h5>
+                        <p style="width: 68%; margin-top: 20px; color: #A6ACAF; font-family: 'Quicksand', sans-serif;">A makeup artist is an artist whose medium is the human body, applying makeup and prosthetics on others for theatre, television, film, fashion, magazines and other similar productions including all aspects of the modeling industry</p>
+                        <div class="icons-2" style="margin-top: 40px;">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-instagram"></i>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-pinterest"></i>
+                        </div>
+                    </center>                    
+                </div>
+            </div>
+        </div>
+        <!-- makeup artist end -->
+
+        <!-- Products-2 -->
+        <div class="container" style="text-align: center; margin-bottom: 30px; margin-top: 150px;">
+            <h2 style="font-family: 'Quicksand', sans-serif;">LATEST SKINCARE ESSENTIALS</h2>
+            <p style="font-family: 'Dancing Script', cursive; font-size: 20px; color: #A6ACAF;">best place to find your beauty</p>
+        </div>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                        <a href="Products/product-1.html">
+                            <img style="margin-top: 8px;" src="../images/product-01.jpg" height="100" alt="">
+                        </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">STICK LIPSTICK</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 23.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                    <a href="Products/product-2.html">
+                        <img style="margin-top: 8px;" src="../images/product-02.jpg" height="100" alt="">
+                    </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">SUMMER MIRAGE</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 32.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                   <a href="Products/product-3.html">
+                    <img style="margin-top: 8px;" src="../images/product-03.jpg" height="100" alt="">
+                   </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">HIGHLIGHTER</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 37.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                    <a href="Products/product-4.html">
+                        <img style="margin-top: 8px;" src="../images/product-04.jpg" height="100" alt="">
+                    </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">EYESHADOW KIT</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 43.00</span>
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                    <a href="Products/product-5.html">
+                        <img style="margin-top: 8px;" src="../images/product-05.jpg" height="100" alt="">
+                    </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">EYESHADOW</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 27.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                    <a href="Products/product-6.html">
+                        <img style="margin-top: 8px;" src="../images/product-06.jpg" height="100" alt="">
+                    </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">WILD PALETTES</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 25.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                    <a href="Products/product-7.html">
+                        <img style="margin-top: 8px;" src="../images/product-07.jpg" height="100" alt="">
+                    </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">RED LIPSTICK</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 37.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                    <a href="Products/product-8.html">
+                        <img style="margin-top: 8px;" src="../images/product-08.jpg" height="100" alt="">
+                    </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">SYRUM</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 27.00</span>
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                    <a href="Products/product-9.html">
+                        <img style="margin-top: 8px;" src="../images/product-09.jpg" height="100" alt="">
+                    </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">CONCEALER</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 23.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                    <a href="Products/product-10.html">
+                        <img style="margin-top: 8px;" src="../images/product-10.jpg" height="100" alt="">
+                    </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">ROZESAFARI</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 23.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                    <a href="Products/product-11.html">
+                        <img style="margin-top: 8px;" src="../images/product-11.jpg" height="100" alt="">
+                    </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">CHANEL</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 57.00</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6" style="display: flex;">
+                    <a href="Products/product-12.html">
+                        <img style="margin-top: 8px;" src="../images/product-12.jpg" height="100" alt="">
+                    </a>
+                    <p style="padding-left: 8px; margin-top: 4px;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">LIP GLOSS</span> <br>
+                        <span style="font-size: 16px; font-family: 'Times New Roman', Times, serif; color:#A6ACAF;">Beauty. Cosmetics</span><br><br>
+                        <span style="font-family: 'Times New Roman', Times, serif;">$ 20.00</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- products-2 end -->
+
+        <!--Services-->
+    <section style="background-color: rgb(255, 247, 240); padding-bottom: 80px; margin-top: 120px;">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-3">
+                    <div class="services" style="margin-top: 100px; text-align: center;">
+                        <img src="images/quality.png" alt="" style="padding-bottom: 10px;">
+                        <h5>QUALITY</h5>
+                        <p style="font-size: 15px; padding: 8px 20px;">At vero eos et accusamus et iusto odio dignissi mos ducimus qui blanditiis praesentium</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="services" style="margin-top: 100px; text-align: center;">
+                        <img src="images/petroleum.png" alt="" style="padding-bottom: 10px;">
+                        <h5>PETROLEUM</h5>
+                        <p style="font-size: 15px; padding: 8px 20px;">At vero eos et accusamus et iusto odio dignissi mos ducimus qui blanditiis praesentium</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="services" style="margin-top: 100px; text-align: center;">
+                        <img src="images/color.png" alt="" style="padding-bottom: 10px;">
+                        <h5>COLORS</h5>
+                        <p style="font-size: 15px; padding: 8px 20px;">At vero eos et accusamus et iusto odio dignissi mos ducimus qui blanditiis praesentium</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="services" style="margin-top: 100px; text-align: center;">
+                        <img src="images/natural.png" alt="" style="padding-bottom: 10px;">
+                        <h5>NATURAL</h5>
+                        <p style="font-size: 15px; padding: 8px 20px;">At vero eos et accusamus et iusto odio dignissi mos ducimus qui blanditiis praesentium</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- shipping -->
+    <div class="container" style="margin-top: 150px;">
+        <div class="row">
+            <div class="col-lg-4" style="display: flex; padding-top: 10px;">
+                <img style="margin: auto;" src="images/icon-number-1.png" alt="" style="width: 100%;">
+                <p style="margin: auto;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">ON-LINE PURCHASE</span><br> <span style="color: #A6ACAF; font-size: 16px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Womens all of ages visit our website regularly and buy the necessaries of life and the loved it.</span></p>
+            </div>
+            <div class="col-lg-4" style="display: flex; padding-top: 10px;">
+                <img style="margin: auto;" src="images/icon-number-2.png" alt="" style="width: 100%;">
+                <p style="margin: auto;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">FREE SHIPPING</span><br>  <span style="color: #A6ACAF; font-size: 16px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Complimentary shipping, the perfect reason to treat yourself. Glamxo is giving free shipping on products.</span></p>
+            </div>
+            <div class="col-lg-4" style="display: flex; padding-top: 10px;">
+                <img style="margin: auto;" src="images/icon-number-3.png" alt="" style="width: 100%;">
+                <p style="margin: auto;"><span style="font-size: 20px; font-family: 'Quicksand', sans-serif;">MONEY BACK</span><br>  <span style="color: #A6ACAF; font-size: 16px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">If you are not satisfied by the products or any other reason, So Glamxo offers you to money back.</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- shipping end -->
+    <!--Services-->
+
+    <!-- popup end -->
+    <center>
+        <div class="popup center">
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <div class="title">
+                Thanks For Your Feedback
+            </div>
+            <div class="description">
+                Thank you for visiting our website!
+            </div>
+            <div class="dismiss-btn">
+                <button id="dismiss-popup-btn">
+                    Dismiss
+                </button>
+            </div>
+        </div>
+    </center>
+    <!-- popupend -->
+
+    <!-- feedback box -->
+    <div class="container-fluid feedback">
+        <center>
+            <div id="feedback-img">
+                <input class="feedback-box" id="feedback-box" type="text" placeholder="feedback">
+                <button class="feedback-btn" onclick="submit()" id="open-popup-btn" type="button"><span>S E N D</span></button>
+            </div>
+        </center>
+    </div>
+    <script>
+        function submit() {
+            var x = document.getElementById('feedback-box').value;
+            if( x ==""){
+                alert("this field cannot be empty")
+            }
+        }
+    </script>
+    <!-- feedback box end -->
+
+    <!-- footer start -->
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="col-lg-4 col-md-12" id="f-1" >
+                <div class="f-m">
+                    <h4>CONTACT</h4>
+                    <p>Address: Seestrasse 21, Zurich <br>E-mail: biagiottitheme@gmail.com <br>Phone : + 99 411 725 39 12</p>
+                    <img src="images/footer-img-1.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12" id="f-2">
+                <div class="f-m">
+                    <img src="images/logo-white.png" width="100" height="100">
+                    <p>An oasis of online beauty built specifically <br> so your new cosmetics site can take <br> everyone's breaths away.</p>
+                    <div class="icons">
+                        <i class="fa fa-facebook fa-lg"></i>
+                        <i class="fa fa-twitter fa-lg"></i>
+                        <i class="fa fa-instagram fa-lg"></i>
+                        <i class="fa fa-pinterest fa-lg"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12" id="f-3">
+                <div class="f-m">
+                    <h4>COLLECTION</h4>
+                    <p>Glowing skin is a result <br> GLAMXO Beauty - Forever Young <br> Pure Skin Solutions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" container-fluid col-lg-12" id="copyright">glamxo &copy; copyright | 2022</div>
+    <!-- footer end -->
+
+    <!------------ JAVASCRIPT ------------->
+
+    
+    
+    <!-- aos animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          duration: 1000,
+      });
+    </script>
+
+    <!-- auto complete -->
+    <script src="jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+    <script src="jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+
+    <script>
+        var cities = ["Beauty Care","Cosmetics","Fragrance","Lipstick","Stick Lipstick","Foundation","Highlighter",
+                      "Eye Shadow Kit","Eye Syrum","Concealer","Lip GLoss"]       
+        $(document).ready(function(){
+            $('#myinput').autocomplete({
+                source:cities
+            },{})
+        })
+    </script> 
+    <script>
+        function search()
+        {
+            var minput = document.getElementById('myinput').value;
+            if(minput == "Cosmetics" || minput == "COSMETICS" || minput == "cosmestics")
+            {
+                window.location = "categories/cosmetics.html";
+            }
+            else if(minput == "Beauty Care" || minput == "BEAUTY CARE" || minput == "beauty care")
+            {
+                window.location = "categories/beautycare.html";
+            }
+            else if(minput == "Fragrance" || minput == "FRAGRANCE" || minput == "fragrance")
+            {
+                window.location = "categories/fragrance.html";
+            }
+            else if(minput == "Lipstick" || minput == "LIPSTICK" || minput == "lipstick")
+            {
+                window.location = "Products/lipstick.html";
+            } 
+            else if(minput == "Stick Lipstick" || minput == "STICK LIPSTICK" || minput == "stick lipstick")
+            {
+                window.location = "Products/product-1.html";
+            }
+            else if(minput == "Foundation" || minput == "FOUNDATION" || minput == "foundation")
+            {
+                window.location = "Products/product-2.html";
+            }
+            else if(minput == "Highlighter" || minput == "HIGHLIGHTER" || minput == "highlighter")
+            {
+                window.location = "Products/product-3.html";
+            }
+            else if(minput == "Eye Shadow Kit" || minput == "EYE SHADOW KIT" || minput == "eye shadow kit")
+            {
+                window.location = "Products/product-4.html";
+            }
+            else if(minput == "Eye Syrum" || minput == "EYE SYRUM" || minput == "eye syrum")
+            {
+                window.location = "Products/product-8.html";
+            }
+            else if(minput == "Concealer" || minput == "CONCEALER" || minput == "concealer")
+            {
+                window.location = "Products/product-9.html";
+            }
+            else if(minput == "Lip GLoss" || minput == "LIP GLOSS" || minput == "lip gloss")
+            {
+                window.location = "Products/product-12.html";
+            }
+            else
+            {
+                alert('Page not found!');
+            }
+        }
+    </script>
+    <!-- auto complete end -->
+
+    <!-- popup -->
+    <script>
+        document.getElementById("open-popup-btn").addEventListener("click",function(){
+        document.getElementsByClassName("popup")[0].classList.add("active");
+    });
+    
+    document.getElementById("dismiss-popup-btn").addEventListener("click",function(){
+        document.getElementsByClassName("popup")[0].classList.remove("active");
+    });
+    </script>
+    <!-- popup end -->
+
+    <!---------- LINKS ---------->
+    <!-- boostrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

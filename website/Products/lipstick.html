@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lipsticks</title>
+    <!-- css embeded -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!----- google fonts ----->
+    <!-- font-1 italic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <!-- font-2 signature -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
+    <!-- font-3 main-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <!-- magnify css -->
+   <link rel="stylesheet" href="../thdoan-magnify-cca1561/css/magnify.css">
+   <!-- autocomplete -->
+   <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.css">
+   <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.min.css">
+   <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.structure.css">
+   <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.structure.min.css">
+   <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.theme.css">
+   <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.theme.min.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;" >
+        <div class="container">
+ 
+            <a class="navbar-brand" href="index.html">
+                <img src="../images/logo.jpg.png" alt="" width="80" height="70">
+                <span style="font-family: 'Dancing Script', cursive;">Glamxo</span>
+            </a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-4" >
+                        <li class="navbar-item">
+                            <a class="nav-link" href="../index.html" style="color: black;">Home</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="../aboutus.html" style="color: black">About</a>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="navbar-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="mydropdown" data-bs-toggle="dropdown" href="" style="color: black">Categories</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" id="ul-color" aria-labelledby="#mydropdown">
+                                <li class="dropdown-item">
+                                    <a class="items" href="../categories/beautycare.html" style="color: black;">Beauty care</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a class="items" href="../categories/cosmetics.html" style="color: black;">Cosmetics</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a class="items" href="../categories/fragrance.html" style="color: black;">Fragrance</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Dropdown end -->
+                        <li class="navbar-item">
+                            <a href="../contactus.html" class="nav-link" href="" style="color: black;">Contact</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="../login.html" style="color: black">Login</a>
+                        </li>                       
+                    </ul>              
+                <!-- search bar -->
+                <div style="margin-left: 15px;"  class="ms-auto">
+                    <img src="../images/searchicon.png.png" width="30" height="30" onclick="search()" alt="">
+                    <input class="search-bar" type="text" placeholder="Search Products" id="myinput">
+                </div>
+                <!-- search bar end -->
+            </div>
+        </div>
+    </nav>
+    <!-- navbar-end -->
+
+    
+    <img class="img-fluid" src="../images/cate-beautycare.jpg" alt="">
+    <h3 style="margin: 50px 0px 40px 10.5%; font-family: 'Quicksand', sans-serif;">LIPSTICKS</h3>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div id="product">                    
+                    <center>
+                        <a href="../Products/product-1.html"><img src="../images/product-01.jpg" height="350" alt=""></a>
+                        <h5 id="title">STICK LIPSTICK</h5>
+                        <h6 id="cate" style="color: #A6ACAF;">Cosmetics</h6>
+                        <h6 id="price">$23.00</h6>
+                        <div class="rating" style="color: lightgray;">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div id="product">
+                    <center>
+                        <a href="../Products/product-7.html"><img src="../images/product-07.jpg" height="350" alt=""></a>
+                        <h5 id="title">RED LIPSTICK</h5>
+                        <h6 id="cate" style="color: #A6ACAF;">Cosmetics</h6>
+                        <h6 id="price">$37.00</h6>
+                        <div class="rating" style="color: lightgray;">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div id="product">
+                    <center>
+                        <a href="../Products/product-10.html"><img src="../images/product-10.jpg" height="350" alt=""></a>
+                        <h5 id="title">ROZE SAFARI</h5>
+                        <h6 id="cate" style="color: #A6ACAF;">Cosmetics</h6>
+                        <h6 id="price">$23.00</h6>
+                        <div class="rating" style="color: lightgray;">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <!-- related products -->
+    <div class="container">
+        <h3 style="margin: 140px 0px 40px 20px; font-family: 'Quicksand', sans-serif;">RELATED PRODUCTS</h3>
+
+        <div class="row">
+            
+            <div class="col-lg-3 col-md-6" id="product">
+                <div style="text-align: center;">
+                    <a href="product-3.html"><img src="../images/product-03.jpg" width="220" height="300" alt=""></a>
+                    <h5 id="title" style="font-family: 'Quicksand', sans-serif;">FILM EYESHADOW</h5>
+                    <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                    <h6 id="price">$27.00</h6>
+                    <div class="rating" style="color: lightgray;">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" id="product">
+                <div style="text-align: center;">
+                    <a href="product-4.html"><img src="../images/product-04.jpg" width="220" height="300" alt=""></a>
+                    <h5 id="title" style="font-family: 'Quicksand', sans-serif;">WILD PALLETES</h5>
+                    <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                    <h6 id="price">$25.00</h6>
+                    <div class="rating" style="color: lightgray;">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" id="product">
+                <div style="text-align: center;">
+                    <a href="product-5.html"><img src="../images/product-05.jpg" width="220" height="300" alt=""></a>
+                    <h5 id="title" style="font-family: 'Quicksand', sans-serif;">ROZE SAFARi</h5>
+                    <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                    <h6 id="price">$23.00</h6>
+                    <div class="rating" style="color: lightgray;">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" id="product">
+                <div style="text-align: center;">
+                    <a href="product-6.html"><img src="../images/product-06.jpg" width="220" height="300" alt=""></a>
+                    <h5 id="title" style="font-family: 'Quicksand', sans-serif;">CHANEL</h5>
+                    <h6 id="cate" style="color: #A6ACAF;">Lip Gloss</h6>
+                    <h6 id="price">$57.00</h6>
+                    <div class="rating" style="color: lightgray;">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- related product end -->
+
+    <!-- footer start -->
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="col-lg-4 col-md-12" id="f-1" >
+                <div class="f-m">
+                    <h4>CONTACT</h4>
+                    <p>Address: Seestrasse 21, Zurich <br>E-mail: biagiottitheme@gmail.com <br>Phone : + 99 411 725 39 12</p>
+                    <img src="../images/footer-img-1.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12" id="f-2">
+                <div class="f-m">
+                    <img src="../images/logo-white.png" width="100" height="100">
+                    <p>An oasis of online beauty built specifically <br> so your new cosmetics site can take <br> everyone's breaths away.</p>
+                    <div class="icons">
+                        <i class="fa fa-facebook fa-lg"></i>
+                        <i class="fa fa-twitter fa-lg"></i>
+                        <i class="fa fa-instagram fa-lg"></i>
+                        <i class="fa fa-pinterest fa-lg"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12" id="f-3">
+                <div class="f-m">
+                    <h4>COLLECTION</h4>
+                    <p>Glowing skin is a result <br> GLAMXO Beauty - Forever Young <br> Pure Skin Solutions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" container-fluid col-lg-12" id="copyright">glamxo &copy; copyright | 2022</div>
+    <!-- footer end -->
+
+    <!---------- LINKS ---------->
+    <!-- boostrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
